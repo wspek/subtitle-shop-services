@@ -79,3 +79,10 @@ def merge_av_files(video_file, audio_file):
     os.rename(merged_filename, video_file)
 
     return merged_filename
+
+
+if __name__ == '__main__':
+    download_audio(
+        url='https://youtu.be/xTY3kPmDrOM?si=pyNSysBJvvBOI55Q',
+        folder='/home/wspek/dev/subtitle-shop-services/var'
+    )

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "subtitle-shop"
+name = "subtitle-shop-services"
 version = "0.1.0"
 description = ""
 authors = ["Waldo Spek <waldospek@gmail.com>"]
@@ -7,9 +7,13 @@ readme = "README.md"
 packages = [{include = "subtitle_shop"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 pytube = "^15.0.0"
 ffmpeg-python = "^0.2.0"
+boto3 = "^1.34.29"
+srt = "^3.5.3"
+strsimpy = "^0.2.1"
+numpy = "^1.26.3"
 
 
 [build-system]
