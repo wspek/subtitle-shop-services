@@ -4,7 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["Waldo Spek <waldospek@gmail.com>"]
 readme = "README.md"
-packages = [{include = "subtitle_shop_services"}]
+packages = [
+    { include = "download" },
+    { include = "subtitle" },
+    { include = "transcribe" },
+    { include = "translate" },
+    { include = "utils" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -14,7 +20,6 @@ boto3 = "^1.34.29"
 srt = "^3.5.3"
 strsimpy = "^0.2.1"
 numpy = "^1.26.3"
-
 
 [build-system]
 requires = ["poetry-core"]
