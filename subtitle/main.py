@@ -37,6 +37,15 @@ def translate_srt_file(src_file, dst_file, src_lang, dst_lang):
     with open(src_file, 'r') as f:
         srt_content = f.read()
 
+    subtitles_translated_complete = translate_srt(srt_content)
+
+    with open(dst_file, 'w') as f:
+        f.write(subtitles_translated_complete)
+
+    return dst_file
+
+
+def translate_srt(srt_content, src_lang, dst_lang):
     subtitles_translated_complete = ''
 
     srt_pages = srt_to_pages(srt_content)
@@ -63,10 +72,7 @@ def translate_srt_file(src_file, dst_file, src_lang, dst_lang):
 
         sub_counter += len(synced_srt_page['blocks'])
 
-    with open(dst_file, 'w') as f:
-        f.write(subtitles_translated_complete)
-
-    return dst_file
+    return subtitles_translated_complete
 
 
 def srt_to_pages(srt_content):
